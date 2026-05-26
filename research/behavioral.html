@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0B5LHBSZYY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0B5LHBSZYY');
+  </script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Behavioral Science of AI — Pengrui Han</title>
+
+  <meta name="author" content="Pengrui Han">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="logo" sizes="180x180" href="../images/logo.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/logo.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/logo.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/logo_1.png">
+
+  <link rel="stylesheet" type="text/css" href="../stylesheet.css">
+</head>
+
+<body>
+
+  <!-- Top tab bar -->
+  <div class="tabbar">
+    <div class="tabbar-inner">
+      <a href="../index.html" class="tab-link">&larr; Home</a>
+      <a class="tab-link tab-active" data-tab="overview">Behavioral Science</a>
+      <a class="tab-link" data-tab="personality">Personality Illusion</a>
+      <a class="tab-link" data-tab="llmrf">Reasoning Failures</a>
+      <a class="tab-link" data-tab="anotb">A-Not-B Errors</a>
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- Overview panel -->
+  <!-- ============================================================== -->
+  <div class="tab-panel active" id="panel-overview">
+    <table style="width:100%;max-width:1050px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+
+          <!-- Hero -->
+          <table style="width:100%;border:0px;border-spacing:0px;margin:10px auto 0 auto;"><tbody>
+            <tr>
+              <td style="padding:42px 20px 10px 20px;text-align:center;vertical-align:middle">
+                <img src="../images/brain/behavioral.png" alt="Behavioral science of AI" style="width:200px;max-width:55%">
+                <p style="margin-top:18px;margin-bottom:6px">
+                  <span style="font-family:'Lato',Verdana,Helvetica,sans-serif;font-size:34px;font-weight:700;color:#8b0000;letter-spacing:-0.5px">Behavioral Science of AI</span>
+                </p>
+                <p style="margin-top:10px;margin-bottom:0;font-size:15px;color:#888;letter-spacing:1px;text-transform:uppercase;font-weight:600">
+                  Understanding what models do, where they fail, and why
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Research statement -->
+          <div style="max-width:820px;margin:30px auto 10px auto;padding:0 28px;text-align:left">
+            <p style="font-size:17px;line-height:1.78;color:#2a2a2e;margin:0 0 20px 0">
+              A long tradition in cognitive science and psychology seeks to understand the human mind by studying <em>behavior</em> &mdash; using systematic observations, controlled experiments, and characteristic failures to infer the &ldquo;software&rdquo; running underneath. This approach has yielded deep insights into perception, memory, reasoning, and decision-making, even without direct access to the underlying neural machinery. Today&rsquo;s large language models present a parallel opportunity: they exhibit rich, complex, and sometimes puzzling behavior, and characterizing this behavior systematically &mdash; what they reliably do, where they fail, and how they compare to biological intelligence &mdash; is essential for both understanding what they are and deploying them safely.
+            </p>
+            <p style="font-size:17px;line-height:1.78;color:#2a2a2e;margin:0">
+              My work takes a <em>cognitive-science-grounded, failure-driven</em> approach: studying specific cognitive phenomena and failures in modern LLMs <a href="#anotb" class="paper-ref">A-Not-B</a>, questioning foundational assumptions in behavioral evaluation <a href="#personality" class="paper-ref">Personality Illusion</a>, building systematic frameworks for understanding and mitigating reasoning failures <a href="#llmrf" class="paper-ref">Reasoning Failures</a>, and extending behavioral analysis from isolated prompts to interactive and agentic settings <a href="#interactive" class="paper-ref">Interactive Evaluation</a>&nbsp;<a href="#agentfail" class="paper-ref">Where Agents Fail</a>.
+            </p>
+          </div>
+
+          <!-- Section heading -->
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+            <tr>
+              <td style="padding:20px 20px 0 20px;width:100%;vertical-align:middle">
+                <heading>Papers</heading>
+              </td>
+            </tr>
+          </tbody></table>
+
+          <!-- Papers list -->
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr onmouseout="personality_stop()" onmouseover="personality_start()" id="personality">
+              <td style="padding:5px;width:17%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='personality_image'>
+                    <img src='../images/personality-1.png' width="150">
+                  </div>
+                  <img src='../images/personality-1.png' width="150">
+                </div>
+                <script type="text/javascript">
+                  function personality_start() {
+                    document.getElementById('personality_image').style.opacity = "1";
+                  }
+                  function personality_stop() {
+                    document.getElementById('personality_image').style.opacity = "0";
+                  }
+                  personality_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:83%;vertical-align:middle">
+                <a href="#" data-tab-jump="personality">
+                  <papertitle>The Personality Illusion: Revealing Dissociation Between Self-Reports &amp; Behavior in LLMs</papertitle>
+                </a>
+                <br />
+                <strong>Pengrui Han*</strong>, <a target="_blank" href="https://www.rkocielnik.com/">Rafal D. Kocielnik</a>*, <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>, <a target="_blank" href="https://www.collectivedesign.group.cam.ac.uk/">Ramit Debnath</a>, <a style="text-decoration: none" target="_blank" href="https://www.deanmobbslab.com/people">Dean Mobbs</a>, <a style="text-decoration: none" target="_blank" href="https://www.eas.caltech.edu/people/anima">Anima Anandkumar</a>, and <a style="text-decoration: none" target="_blank" href="https://www.rmichaelalvarez.com/">R. Michael Alvarez</a> (* <strong>Equal Contribution</strong>)
+                <br />
+                <em>International Conference on Machine Learning (ICML), 2026</em>
+                <br />
+                <em>NeurIPS LAW Workshop: Bridging Language, Agent, and World Models</em>, 2025, <font color="red"><strong>Best Paper Honorable Mention</strong></font>
+                <br />
+                <a href="#" data-tab-jump="personality">view</a>
+                /
+                <a target="_blank" href="https://arxiv.org/abs/2509.03730">arXiv</a>
+                /
+                <a target="_blank" href="https://psychology-of-ai.github.io/">project</a>
+                /
+                <a target="_blank" href="https://github.com/psychology-of-AI/Personality-Illusion">code</a>
+                /
+                <a target="_blank" href="https://wap.mittrchina.com/news/detail/15459">media</a>
+                <p></p>
+                <p>
+                  LLMs say they have personalities, but they don&rsquo;t act like it. Alignment today shapes language, not behavior. This linguistic&ndash;behavioral dissociation cautions against equating coherent self-reports with cognitive depth.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="llmrf_stop()" onmouseover="llmrf_start()" id="llmrf">
+              <td style="padding:5px;width:17%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='llmrf_image'>
+                    <img src='../images/llmrf-1.png' width="150">
+                  </div>
+                  <img src='../images/llmrf-2.png' width="150">
+                </div>
+                <script type="text/javascript">
+                  function llmrf_start() {
+                    document.getElementById('llmrf_image').style.opacity = "1";
+                  }
+                  function llmrf_stop() {
+                    document.getElementById('llmrf_image').style.opacity = "0";
+                  }
+                  llmrf_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:83%;vertical-align:middle">
+                <a href="#" data-tab-jump="llmrf">
+                  <papertitle>Large Language Model Reasoning Failures</papertitle>
+                </a>
+                <br />
+                <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>*, <strong>Pengrui Han</strong>*, and <a target="_blank" href="https://cocolab.stanford.edu/ndg">Noah Goodman</a> (* <strong>Equal Contribution</strong>)
+                <br />
+                <em>Transactions on Machine Learning Research (TMLR)</em>, 2026, <font color="red"><strong>Survey Certificate</strong></font>
+                <br />
+                <a href="#" data-tab-jump="llmrf">view</a>
+                /
+                <a target="_blank" href="https://arxiv.org/abs/2602.06176">arXiv</a>
+                /
+                <a target="_blank" href="https://github.com/Peiyang-Song/Awesome-LLM-Reasoning-Failures">code</a>
+                /
+                <a target="_blank" href="https://openreview.net/forum?id=hsgMn4KBFG">proceeding</a>
+                /
+                <a target="_blank" href="https://www.livescience.com/technology/artificial-intelligence/not-how-you-build-a-digital-mind-reasoning-failures-are-preventing-ai-models-from-achieving-human-level-intelligence">media</a>
+                <p></p>
+                <p>
+                  We present the first comprehensive survey dedicated to reasoning failures in LLMs. By unifying fragmented research efforts, our survey provides a structured perspective on systemic weaknesses in LLM reasoning, offering valuable insights and guiding future research towards building stronger, more reliable, and robust reasoning capabilities.
+                </p>
+              </td>
+            </tr>
+
+            <tr onmouseout="a_not_b_stop()" onmouseover="a_not_b_start()" id="anotb">
+              <td style="padding:5px;width:17%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='a_not_b_image'>
+                    <img src='../images/a_not_b-1.jpg' width="150">
+                  </div>
+                  <img src='../images/a_not_b-2.jpg' width="150">
+                </div>
+                <script type="text/javascript">
+                  function a_not_b_start() {
+                    document.getElementById('a_not_b_image').style.opacity = "1";
+                  }
+                  function a_not_b_stop() {
+                    document.getElementById('a_not_b_image').style.opacity = "0";
+                  }
+                  a_not_b_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:83%;vertical-align:middle">
+                <a href="#" data-tab-jump="anotb">
+                  <papertitle>In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models</papertitle>
+                </a>
+                <br />
+                <strong>Pengrui Han</strong>*, <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>*, <a target="_blank" href="https://haofeiyu.me/">Haofei Yu</a>, and <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a> (* <strong>Equal Contribution</strong>)
+                <br />
+                <em>Findings of Empirical Methods in Natural Language Processing (EMNLP)</em>, 2024
+                <br />
+                <a href="#" data-tab-jump="anotb">view</a>
+                /
+                <a target="_blank" href="https://arxiv.org/abs/2409.15454">arXiv</a>
+                /
+                <a target="_blank" href="https://github.com/Peiyang-Song/LLM-A-Not-B-Errors">code</a>
+                /
+                <a target="_blank" href="https://aclanthology.org/2024.findings-emnlp.322/">proceeding</a>
+                <p></p>
+                <p>
+                  Motivated by the crucial cognitive phenomenon of A-not-B errors, we present the first systematic evaluation on the surprisingly vulnerable inhibitory control abilities of LLMs. We reveal that this weakness undermines LLMs' trustworthy reasoning capabilities across diverse domains, and introduce various mitigations.
+                </p>
+              </td>
+            </tr>
+
+            <tr id="agentfail">
+              <td style="padding:5px;width:17%;vertical-align:middle">
+                <img src='../images/agent_fail.png' width="150">
+              </td>
+              <td style="padding:20px;width:83%;vertical-align:middle">
+                <a target="_blank" href="https://arxiv.org/abs/2509.25370">
+                  <papertitle>Where LLM Agents Fail and How They Can Learn from Failures</papertitle>
+                </a>
+                <br />
+                <a target="_blank" href="https://kunlun-zhu.github.io/">Kunlun Zhu</a>, <a target="_blank" href="https://m-serious.github.io/">Zijia Liu</a>, <a target="_blank" href="https://bingxuanli.com/">Bingxuan Li</a>, Muxin Tian, <a target="_blank" href="https://scholar.google.com/citations?user=exW3DZ4AAAAJ&hl=en">Yingxuan Yang</a>, Jiaxun Zhang, <strong>Pengrui Han</strong>, Qipeng Xie, Fuyang Cui, Weijia Zhang, Xiaoteng Ma, <a target="_blank" href="https://www.xiaodongyu.me/">Xiaodong Yu</a>, <a target="_blank" href="https://scholar.google.com/citations?user=VDb6XokAAAAJ&hl=en">Gowtham Ramesh</a>, <a target="_blank" href="https://jialianwu.com/">Jialian Wu</a>, <a target="_blank" href="https://zicliu.wixsite.com/mysite">Zicheng Liu</a>, <a target="_blank" href="https://lupantech.github.io/">Pan Lu</a>, <a target="_blank" href="https://www.james-zou.com/">James Zou</a>, and <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a>
+                <br />
+                <em>Preprint</em>, 2025
+                <br />
+                <a target="_blank" href="https://arxiv.org/abs/2509.25370">arXiv</a>
+                <p></p>
+                <p>
+                  LLM agents amplify cascading failures, where a single root-cause error propagates through subsequent decisions. We introduce a modular taxonomy of agent failure modes, build the first dataset of annotated failure trajectories, and propose <em>AgentDebug</em> &mdash; a debugging framework that isolates root-cause failures and enables agents to iteratively recover.
+                </p>
+              </td>
+            </tr>
+
+            <tr id="interactive">
+              <td style="padding:5px;width:17%;vertical-align:middle">
+                <img src='../images/interactive.png' width="150">
+              </td>
+              <td style="padding:20px;width:83%;vertical-align:middle">
+                <a target="_blank" href="#">
+                  <papertitle>Interactive Evaluation Requires a Design Science</papertitle>
+                </a>
+                <br />
+                <a target="_blank" href="https://keyangds.github.io/">Keyang Xuan</a>*, <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>*, <a target="_blank" href="https://lupantech.github.io/">Pan Lu</a>, <strong>Pengrui Han</strong>, <a target="_blank" href="https://wenkai-li.github.io/">Wenkai Li</a>, <a target="_blank" href="https://zhenyu.gallery/">Zhenyu Zhang</a>, <a target="_blank" href="https://zexuehe.github.io/">Zexue He</a>, <a target="_blank" href="https://wenyueh.github.io/">Wenyue Hua</a>, <a target="_blank" href="https://limanling.github.io/">Manling Li</a>, <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a>, <a target="_blank" href="https://mlg.eng.cam.ac.uk/adrian/">Adrian Weller</a>, <a target="_blank" href="https://yizhong-wang.com/">Yizhong Wang</a>&dagger;, and <a target="_blank" href="https://jiaxin-pei.github.io/">Jiaxin Pei</a>&dagger; (* <strong>Equal Contribution</strong>, &dagger; <strong>Equal Advising</strong>)
+                <br />
+                <em>Preprint</em>, 2026
+                <br />
+                <a target="_blank" href="#">arXiv</a>
+                /
+                <a target="_blank" href="#">code</a>
+                <p></p>
+                <p>
+                  AI evaluation is increasingly moving beyond static responses toward systems that act through tools, environments, users, and other agents. But the field risks adding interaction faster than it develops the scientific foundations for evaluating interaction. We argue that interactive evaluation needs a <em>design science</em>, not just more agent benchmarks &mdash; defining interactive evaluation, proposing a 2-axis taxonomy, and outlining principles for designs that are interpretable, comparable, and scientifically useful.
+                </p>
+              </td>
+            </tr>
+
+          </tbody></table>
+
+        </td>
+      </tr>
+    </tbody></table>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- Personality Illusion (iframe) -->
+  <!-- ============================================================== -->
+  <div class="tab-panel" id="panel-personality">
+    <iframe class="paper-frame" data-src="https://psychology-of-ai.github.io/" loading="lazy"></iframe>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- LLM Reasoning Failures (detail panel) -->
+  <!-- ============================================================== -->
+  <div class="tab-panel" id="panel-llmrf">
+    <div class="paper-detail">
+      <h1 class="paper-detail-title">Large Language Model Reasoning Failures</h1>
+      <p class="paper-detail-authors">
+        <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>*, <strong>Pengrui Han</strong>*, and <a target="_blank" href="https://cocolab.stanford.edu/ndg">Noah Goodman</a> &nbsp;(* Equal Contribution)
+      </p>
+      <p class="paper-detail-venue">
+        Transactions on Machine Learning Research (TMLR), 2026 &middot; <span style="color:#b00;font-weight:700;font-style:normal">Survey Certificate</span>
+      </p>
+      <div class="paper-detail-links">
+        <a target="_blank" href="https://arxiv.org/abs/2602.06176">arXiv</a>
+        <a target="_blank" href="https://github.com/Peiyang-Song/Awesome-LLM-Reasoning-Failures">Code</a>
+        <a target="_blank" href="https://openreview.net/forum?id=hsgMn4KBFG">Proceeding</a>
+        <a target="_blank" href="https://www.livescience.com/technology/artificial-intelligence/not-how-you-build-a-digital-mind-reasoning-failures-are-preventing-ai-models-from-achieving-human-level-intelligence">Media: Live Science</a>
+        <a target="_blank" href="https://www.popularmechanics.com/science/a70328740/ai-fatal-flaw/">Media: Popular Mechanics</a>
+      </div>
+      <div class="paper-detail-abstract">
+        <strong>Abstract.</strong> Large Language Models (LLMs) have exhibited remarkable reasoning capabilities, achieving impressive results across a wide range of tasks. Despite these advances, significant reasoning failures persist, occurring even in seemingly simple scenarios. To systematically understand and address these shortcomings, we present the first comprehensive survey dedicated to reasoning failures in LLMs. We introduce a novel categorization framework that distinguishes reasoning into embodied and non-embodied types, with the latter further subdivided into informal (intuitive) and formal (logical) reasoning. In parallel, we classify reasoning failures along a complementary axis into three types: fundamental failures intrinsic to LLM architectures that broadly affect downstream tasks; application-specific limitations that manifest in particular domains; and robustness issues characterized by inconsistent performance across minor variations. For each category, we synthesize existing studies, analyze common failure patterns and underlying causes, and suggest mitigation strategies. By unifying fragmented research efforts, our survey provides a structured perspective on systemic weaknesses in LLM reasoning, offering valuable insights and guiding future research towards building stronger, more reliable, and robust reasoning capabilities.
+      </div>
+      <img src="../images/llmrf-1.png" alt="LLM Reasoning Failures" class="paper-detail-image" style="max-width:600px">
+    </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- A-Not-B Errors (detail panel) -->
+  <!-- ============================================================== -->
+  <div class="tab-panel" id="panel-anotb">
+    <div class="paper-detail">
+      <h1 class="paper-detail-title">In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models</h1>
+      <p class="paper-detail-authors">
+        <strong>Pengrui Han</strong>*, <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>*, <a target="_blank" href="https://haofeiyu.me/">Haofei Yu</a>, and <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a> &nbsp;(* Equal Contribution)
+      </p>
+      <p class="paper-detail-venue">
+        Findings of EMNLP, 2024
+      </p>
+      <div class="paper-detail-links">
+        <a target="_blank" href="https://arxiv.org/abs/2409.15454">arXiv</a>
+        <a target="_blank" href="https://github.com/Peiyang-Song/LLM-A-Not-B-Errors">Code</a>
+        <a target="_blank" href="https://aclanthology.org/2024.findings-emnlp.322/">Proceeding</a>
+      </div>
+      <div class="paper-detail-abstract">
+        <strong>Abstract.</strong> Recent advancements in artificial intelligence have led to the creation of highly capable large language models (LLMs) that can perform tasks in a human-like manner. However, LLMs exhibit only infant-level cognitive abilities in certain areas. One such area is the A-Not-B error, a phenomenon seen in infants where they repeat a previously rewarded behavior despite well-observed changed conditions. This highlights their lack of inhibitory control &mdash; the ability to stop a habitual or impulsive response. In our work, we design a text-based multi-choice QA scenario similar to the A-Not-B experimental settings to systematically test the inhibitory control abilities of LLMs. We found that state-of-the-art LLMs (like Llama3-8b) perform consistently well with in-context learning (ICL) but make errors and show a significant drop of as many as 83.3% in reasoning tasks when the context changes trivially. This suggests that LLMs only have inhibitory control abilities on par with human infants in this regard, often failing to suppress the previously established response pattern during ICL.
+      </div>
+      <img src="../images/a_not_b-1.jpg" alt="A-Not-B Errors" class="paper-detail-image" style="max-width:600px">
+    </div>
+  </div>
+
+  <!-- Tab switching script -->
+  <script>
+    (function() {
+      function activateTab(id) {
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('[data-tab]').forEach(t => t.classList.remove('tab-active'));
+        const panel = document.getElementById('panel-' + id);
+        const tab = document.querySelector('[data-tab="' + id + '"]');
+        if (!panel || !tab) return;
+        panel.classList.add('active');
+        tab.classList.add('tab-active');
+        const iframe = panel.querySelector('iframe[data-src]');
+        if (iframe && !iframe.src) iframe.src = iframe.dataset.src;
+        if (history.replaceState) history.replaceState(null, '', '#' + id);
+        window.scrollTo(0, 0);
+      }
+
+      document.querySelectorAll('[data-tab]').forEach(tab => {
+        tab.addEventListener('click', (e) => {
+          e.preventDefault();
+          activateTab(tab.dataset.tab);
+        });
+      });
+
+      document.querySelectorAll('[data-tab-jump]').forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          activateTab(link.dataset.tabJump);
+        });
+      });
+
+      const initial = window.location.hash.slice(1);
+      if (initial && document.getElementById('panel-' + initial)) {
+        activateTab(initial);
+      }
+    })();
+  </script>
+
+</body>
+
+</html>

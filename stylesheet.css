@@ -129,3 +129,274 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+.brain-card {
+  display: inline-block;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  vertical-align: top;
+}
+
+.brain-image-area {
+  position: relative;
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.brain-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border: 0;
+  transition: filter 0.35s ease,
+              transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.brain-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.brain-overlay-btn {
+  background: #8b0000;
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+.brain-card:hover .brain-img {
+  filter: brightness(0.7);
+  transform: scale(1.04);
+}
+
+.brain-card:hover .brain-overlay {
+  opacity: 1;
+}
+
+.brain-card:active .brain-img {
+  transform: scale(1.01);
+  transition-duration: 0.15s;
+}
+
+.brain-caption {
+  display: block;
+  margin-top: 16px;
+  color: #8b0000;
+  font-weight: 700;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+  text-align: center;
+}
+
+.brain-card:hover .brain-caption {
+  color: #b30000;
+}
+
+.brain-hint {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  transition: color 0.25s ease, letter-spacing 0.3s ease;
+}
+
+.brain-card:hover .brain-hint {
+  color: #b30000;
+  letter-spacing: 1.8px;
+}
+
+/* Smooth scroll for in-page anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll offset so anchor targets land below the sticky tab bar */
+#panel-overview tr[id] {
+  scroll-margin-top: 70px;
+}
+
+/* Inline paper reference link in research statement */
+.paper-ref {
+  display: inline-block;
+  color: #8b0000;
+  background: rgba(139, 0, 0, 0.06);
+  padding: 1px 9px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.93em;
+  line-height: 1.4;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.paper-ref:hover {
+  background: rgba(139, 0, 0, 0.14);
+  color: #6a0000;
+  transform: translateY(-1px);
+}
+
+.paper-ref:active {
+  transform: translateY(0);
+}
+
+/* External citation reference (e.g., [1] linking to an external paper) */
+.ext-ref {
+  color: #1772d0;
+  text-decoration: none;
+  font-size: 0.78em;
+  vertical-align: super;
+  font-weight: 600;
+  padding: 0 2px;
+  transition: color 0.2s ease;
+}
+
+.ext-ref:hover {
+  color: #f09228;
+}
+
+/* === Research subpage tab bar === */
+.tabbar {
+  background: #f7f7f8;
+  border-bottom: 1px solid #e5e5e7;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+
+.tabbar-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tab-link {
+  display: inline-block;
+  padding: 14px 16px;
+  color: #444;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tab-link:hover {
+  color: #1772d0;
+}
+
+.tab-active {
+  color: #8b0000;
+  border-bottom-color: #8b0000;
+  font-weight: 700;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.paper-frame {
+  width: 100%;
+  height: calc(100vh - 56px);
+  border: 0;
+  display: block;
+}
+
+.paper-detail {
+  max-width: 880px;
+  margin: 50px auto 60px auto;
+  padding: 0 28px;
+}
+
+.paper-detail-title {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.paper-detail-authors {
+  font-size: 16px;
+  color: #444;
+  margin: 0 0 8px 0;
+  line-height: 1.65;
+}
+
+.paper-detail-venue {
+  font-size: 15px;
+  color: #666;
+  font-style: italic;
+  margin: 0 0 22px 0;
+  line-height: 1.55;
+}
+
+.paper-detail-links {
+  margin: 0 0 28px 0;
+}
+
+.paper-detail-links a {
+  display: inline-block;
+  padding: 7px 16px;
+  background: #2d2d35;
+  color: #fff !important;
+  border-radius: 22px;
+  margin-right: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.paper-detail-links a:hover {
+  background: #1772d0;
+  color: #fff !important;
+}
+
+.paper-detail-abstract {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  background: #f9f9fb;
+  padding: 22px 28px;
+  border-left: 3px solid #8b0000;
+  border-radius: 4px;
+  margin: 0 0 28px 0;
+}
+
+.paper-detail-image {
+  display: block;
+  max-width: 100%;
+  margin: 28px auto;
+  border-radius: 8px;
+}
