@@ -1,0 +1,9 @@
+# Keep raw photo originals out of the repo — they are local backups only.
+# The web-sized JPGs in images/photos/ are what gets served.
+images/photos/_originals/
+
+# Common macOS / editor cruft
+.DS_Store
+.idea/
+.vscode/
+*.swp
