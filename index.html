@@ -30,6 +30,26 @@
 </head>
 
 <body>
+
+  <!-- Sticky top nav -->
+  <nav class="main-nav">
+    <a href="#news">News</a>
+    <span class="main-nav-dot">&middot;</span>
+    <a href="#research">Research</a>
+    <span class="main-nav-dot">&middot;</span>
+    <a href="#publications">Publications</a>
+    <span class="main-nav-dot">&middot;</span>
+    <a href="#awards">Awards</a>
+    <span class="main-nav-dot">&middot;</span>
+    <a href="#media">Media</a>
+    <span class="main-nav-dot">&middot;</span>
+    <a href="#teaching">Teaching</a>
+    <span class="main-nav-dot">&middot;</span>
+    <a href="#services">Services</a>
+    <span class="main-nav-dot">&middot;</span>
+    <a href="#misc">Misc</a>
+  </nav>
+
   <table style="width:100%;max-width:1050px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -75,7 +95,7 @@
 	<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>News</heading>
+              <heading id="news">News</heading>
 	      <p>
   <b>[Apr 2026]</b> 🔥 Our paper <a href="https://psychology-of-ai.github.io/">The Personality Illusion</a> is accepted to ICML. See you in Seoul!<br>
   <b>[Mar 2026]</b>  Our paper <a href="https://www.arxiv.org/abs/2602.06176">Large Language Model Reasoning Failures</a> is featured by <a href="https://www.livescience.com/technology/artificial-intelligence/not-how-you-build-a-digital-mind-reasoning-failures-are-preventing-ai-models-from-achieving-human-level-intelligence">Live Science</a> and <a href="https://www.popularmechanics.com/science/a70328740/ai-fatal-flaw/">Popular Mechanics</a>. Thank you!<br>
@@ -108,7 +128,7 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research</heading>
+              <heading id="research">Research</heading>
               <!-- <p> I’m interested in <b>language and intelligence</b> in both humans and machines, particularly the role language plays in shaping intelligent behavior, which I study through comparisons between LLMs and humans. I analyze their behavioral capabilities and failures, examine internal mechanisms, and develop strategies to enhance intelligent machine systems.</p> -->
   <p>
     My research aims to advance <strong>scientific understanding of AI</strong> (especially neural models like LLMs), and more broadly, the general principles of intelligence and intelligent behavior. I also work on problems where current AI still falls short of biological intelligence, such as adaptivity, robustness, and sample efficiency. At the same time, I am drawn to using AI as a powerful instrument for studying open scientific questions about the human mind and brain. I approach this through four interconnected threads:
@@ -257,7 +277,7 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          <heading>Selected Publications</heading>
+          <heading id="publications">Selected Publications</heading>
 
           <tr onmouseout="personality_stop()" onmouseover="personality_start()" id="personality">
             <td style="padding:5px;width:17%;vertical-align:middle">
@@ -587,7 +607,7 @@
 	<table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Selected Awards</heading>
+              <heading id="awards">Selected Awards</heading>
 		<ul>
       <li>TMLR Survey Certification (2026)</li>
       <li>NeurIPS LAW Workshop Best Paper Honorable Mention Award (2025)</li>
@@ -603,7 +623,7 @@
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Selected Media</heading>
+              <heading id="media">Selected Media</heading>
 		<ul>
       <li><a target="_blank" href="https://www.livescience.com/technology/artificial-intelligence/not-how-you-build-a-digital-mind-reasoning-failures-are-preventing-ai-models-from-achieving-human-level-intelligence">'Not how you build a digital mind': How reasoning failures are preventing AI models from achieving human-level intelligence</a>, Live Science, 2026</li>
       <li><a target="_blank" href="https://www.popularmechanics.com/science/a70328740/ai-fatal-flaw/">Scientists Found AI’s Fatal Flaw—The Most Advanced Models Are Failing Basic Logic Tests</a>, Popular Mechanics, 2026</li>
@@ -620,7 +640,7 @@
     <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Teaching</heading>
+              <heading id="teaching">Teaching</heading>
 		<ul>
       <li>CS 440: Artificial Intelligence, Teaching Assistant @ UIUC, Summer 2026</li> 
       <li>CS 411: Database Systems, Teaching Assistant @ UIUC, Spring 2026</li> 
@@ -640,7 +660,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Academic Services</heading>
+              <heading id="services">Academic Services</heading>
 		<ul>
 		  <li><b>Reviewer for journals:</b> TMLR.</li>
 		  <li><b>Reviewer for conferences:</b> ICLR, ICML, NeurIPS, ACL, COLM, COLING.</li>
@@ -655,7 +675,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20" style="table-layout:fixed"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Misc</heading>
+              <heading id="misc">Misc</heading>
               <p class="misc-narrative">
                 Outside research, I play classical flute, hit the slopes any chance I can in winter, swim and play badminton year-round, and try to travel somewhere new every few months, usually somewhere with mountains or water.
               </p>
@@ -776,6 +796,31 @@
       </td>
     </tr>
   </table>
+
+  <!-- Scroll-spy: highlight the nav link of the section currently in view -->
+  <script>
+    (function() {
+      const sections = document.querySelectorAll('heading[id]');
+      const navLinks = document.querySelectorAll('.main-nav a');
+      if (!sections.length || !('IntersectionObserver' in window)) return;
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+              link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+            });
+          }
+        });
+      }, {
+        rootMargin: '-25% 0px -65% 0px',
+        threshold: 0
+      });
+
+      sections.forEach(s => observer.observe(s));
+    })();
+  </script>
 
 </body>
 

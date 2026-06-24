@@ -1,3 +1,54 @@
+/* ========= Main page sticky top nav ========= */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: saturate(180%) blur(14px);
+  -webkit-backdrop-filter: saturate(180%) blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 14px 20px;
+  text-align: center;
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.main-nav::-webkit-scrollbar { display: none; }
+
+.main-nav a {
+  color: #888;
+  text-decoration: none;
+  margin: 0 2px;
+  padding: 4px 8px;
+  display: inline-block;
+  transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: #8b0000;
+}
+
+.main-nav a.active {
+  color: #8b0000;
+}
+
+.main-nav-dot {
+  color: #d4d4d4;
+  font-weight: 400;
+  margin: 0 -2px;
+}
+
+heading[id] {
+  scroll-margin-top: 70px;
+}
+
 /* latin-ext */
 @font-face {
   font-family: 'Lato';
