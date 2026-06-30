@@ -97,7 +97,9 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading id="news">News</heading>
 	      <p>
-  <b>[Apr 2026]</b> 🔥 Our paper <a href="https://psychology-of-ai.github.io/">The Personality Illusion</a> is accepted to ICML. See you in Seoul!<br>
+  <b>[Jul 2026]</b> We released our new preprint <a href="https://pengrui-han.github.io/LLM_Modularity_Page/">Modular Cognitive Architecture Emerges in Large Language Models</a>.  <br>
+  <b>[Jun 2026]</b> We released our paper on <a href="https://psychology-of-ai.github.io/psychometric-evaluation.html">Psychometric Evaluation of LLMs</a> &mdash; ICML CTB Workshop, <strong>Oral Presentation</strong>.<br>
+  <b>[Apr 2026]</b> Our paper <a href="https://psychology-of-ai.github.io/">The Personality Illusion</a> is accepted to ICML. See you in Seoul!<br>
   <b>[Mar 2026]</b>  Our paper <a href="https://www.arxiv.org/abs/2602.06176">Large Language Model Reasoning Failures</a> is featured by <a href="https://www.livescience.com/technology/artificial-intelligence/not-how-you-build-a-digital-mind-reasoning-failures-are-preventing-ai-models-from-achieving-human-level-intelligence">Live Science</a> and <a href="https://www.popularmechanics.com/science/a70328740/ai-fatal-flaw/">Popular Mechanics</a>. Thank you!<br>
   <b>[Jan 2026]</b>  Our paper <a href="https://openreview.net/pdf?id=vnX1WHMNmz">Large Language Model Reasoning Failures</a> is accepted to TMLR with a <strong>Survey Certificate</strong>.<br>
   <!-- <b>[Dec 2025]</b>  We released our paper on <a href="https://arxiv.org/abs/2512.16301">Adaptation of Agentic AI</a>, with public repository <a href="https://github.com/pat-jj/Awesome-Adaptation-of-Agentic-AI/tree/main">here</a>. Hope you enjoy reading it!<br> -->
@@ -279,6 +281,44 @@
 
           <heading id="publications">Selected Publications</heading>
 
+          <tr onmouseout="modularity_stop()" onmouseover="modularity_start()" id="modularity">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='modularity_image'>
+                  <img src='images/modularity.png' width="150">
+                </div>
+                <img src='images/modularity.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function modularity_start() {
+                  document.getElementById('modularity_image').style.opacity = "1";
+                }
+
+                function modularity_stop() {
+                  document.getElementById('modularity_image').style.opacity = "0";
+                }
+                modularity_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://pengrui-han.github.io/LLM_Modularity_Page/">
+                <papertitle>Modular Cognitive Architecture Emerges in Large Language Models</papertitle>
+              </a>
+              <br />
+              <strong>Pengrui Han</strong>, <a target="_blank" href="https://www.mit.edu/~jda/">Jacob Andreas</a>, <a target="_blank" href="https://www.evlab.mit.edu/">Evelina Fedorenko</a><sup>&dagger;</sup>, and <a target="_blank" href="https://andrea-de-varda.github.io/">Andrea Gregor de Varda</a><sup>&dagger;</sup> (<sup>&dagger;</sup> <strong>Co-senior Authors</strong>)
+              <br />
+              <em>Preprint</em>, 2026
+              <br />
+              <a target="_blank" href="https://pengrui-han.github.io/LLM_Modularity_Page/">project</a>
+              /
+              <a target="_blank" href="https://github.com/Pengrui-Han/LLM_Modularity">code</a>
+              <p></p>
+              <p>
+                Through circuit analyses across 46 tasks spanning language, formal reasoning, social reasoning, and physical reasoning, we find that LLMs develop a <strong>modular cognitive architecture mirroring the human brain</strong>: tasks drawing on the same network in humans recruit overlapping neurons in LLMs, whereas tasks drawing on different networks recruit distinct neurons. Modularity may be a fundamental principle of intelligent systems rather than a biological accident.
+              </p>
+            </td>
+          </tr>
+
           <tr onmouseout="personality_stop()" onmouseover="personality_start()" id="personality">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
@@ -307,7 +347,7 @@
               <br />
               <em>International Conference on Machine Learning (ICML), 2026</em> 
               <br />
-              <em>NeurIPS LAW Workshop: Bridging Language, Agent, and World Models</em>, 2025,  <font color="red"><strong>Best Paper Honorable Mention </strong></font>
+              <em>NeurIPS LAW Workshop</em>, 2025,  <font color="red"><strong>Best Paper Honorable Mention </strong></font>
               <br />
               <!-- <br />
               <em>NeurIPS Workshop on LLM Persona Modeling (PersonaNLP)</em>, 2025, <font color="red"><strong>Oral Presentation</strong></font>
@@ -483,43 +523,6 @@
 	      <a target="_blank" href="https://github.com/barryhpr/SyntheticDebiasing">code</a>
               /
 	      <a target="_blank" href="https://openreview.net/forum?id=q5Ft9ZJtHm">proceeding</a>
-              <p></p>
-              <p>
-                We propose a light and efficient pipeline that enables both domain and non-domain experts to quickly generate synthetic debiasing data to mitigate specific or general bias in their models with parameter-efficient fine-tuning.
-              </p>
-            </td>
-          </tr>
-
-          <tr onmouseout="papercopilot_stop()" onmouseover="papercopilot_start()">
-            <td style="padding:5px;width:17%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='papercopilot_image'>
-                  <img src='images/papercopilot-2.png' width="150" >
-                </div>
-                  <img src='images/papercopilot-1.png' width="150" >
-              </div>
-              <script type="text/javascript">
-                function papercopilot_start() {
-                  document.getElementById('papercopilot_image').style.opacity = "1";
-                }
-
-                function papercopilot_stop() {
-                  document.getElementById('papercopilot_image').style.opacity = "0";
-                }
-                papercopilot_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:83%;vertical-align:middle">
-              <a target="_blank" href="https://arxiv.org/abs/2409.04593">
-                <papertitle>Paper Copilot: A Self-Evolving and Efficient LLM System for Personalized Academic Assistance</papertitle>
-              </a>
-              <br />
-              <a target="_blank" href="https://macenter.wixsite.com/home/guanyulin">Guanyu Lin</a>*, <a target="_blank" href="https://github.com/ft2023">Tao Feng</a>*, <strong>Pengrui Han</strong>*,   <a target="_blank" href="https://www.mit.edu/~geliu/">Ge Liu</a>, <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a> (* <strong>Equal Contribution</strong>)
-              <br /> <em>System Demonstration Track of Empirical Methods in Natural Language Processing (EMNLP)</em>, 2024<br />
-	  
-              <em>Huggingface Live Demo: <a target="_blank" href="https://huggingface.co/spaces/ulab-ai/ArxivCopilot">Link</a></em>
- 
-	      <!-- <a target="_blank" href="https://github.com/barryhpr/SyntheticDebiasing">code</a> -->
               <p></p>
               <p>
                 We propose a light and efficient pipeline that enables both domain and non-domain experts to quickly generate synthetic debiasing data to mitigate specific or general bias in their models with parameter-efficient fine-tuning.

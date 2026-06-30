@@ -36,6 +36,7 @@
       <a class="tab-link tab-active" data-tab="overview">Behavioral Science</a>
       <a class="tab-link" data-tab="personality">Personality Illusion</a>
       <a class="tab-link" data-tab="llmrf">Reasoning Failures</a>
+      <a class="tab-link" data-tab="psychometric">Psychometric Eval</a>
       <a class="tab-link" data-tab="anotb">A-Not-B Errors</a>
     </div>
   </div>
@@ -173,6 +174,47 @@
               </td>
             </tr>
 
+            <tr onmouseout="psychometric_stop()" onmouseover="psychometric_start()" id="psychometric">
+              <td style="padding:5px;width:17%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='psychometric_image'>
+                    <img src='../images/pyschometric.png' width="150">
+                  </div>
+                  <img src='../images/pyschometric.png' width="150">
+                </div>
+                <script type="text/javascript">
+                  function psychometric_start() {
+                    document.getElementById('psychometric_image').style.opacity = "1";
+                  }
+                  function psychometric_stop() {
+                    document.getElementById('psychometric_image').style.opacity = "0";
+                  }
+                  psychometric_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:83%;vertical-align:middle">
+                <a href="#" data-tab-jump="psychometric">
+                  <papertitle>Rethinking Psychometric Evaluation of LLMs: When and Why Self-Reports Predict Behavior</papertitle>
+                </a>
+                <br />
+                <a target="_blank" href="https://www.rkocielnik.com/">Rafal D. Kocielnik</a>, <strong>Pengrui Han</strong>, <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>, <a target="_blank" href="https://myrl.marmarel.is/">Myrl G. Marmarelis</a>, <a target="_blank" href="https://www.chia.cam.ac.uk/team/ramit-debnath">Ramit Debnath</a>, <a target="_blank" href="https://www.deanmobbslab.com/">Dean Mobbs</a>, <a target="_blank" href="https://tensorlab.cms.caltech.edu/users/anima/">Anima Anandkumar</a>, and <a target="_blank" href="https://www.rmichaelalvarez.com/">R. Michael Alvarez</a>
+                <br />
+                <em>ICML Workshop on Combining Theory and Benchmarks (CTB)</em>, 2026, <font color="red"><strong>Oral Presentation</strong></font>
+                <br />
+                <a href="#" data-tab-jump="psychometric">view</a>
+                /
+                <a target="_blank" href="https://arxiv.org/abs/2606.12730">arXiv</a>
+                /
+                <a target="_blank" href="https://psychology-of-ai.github.io/psychometric-evaluation.html">project</a>
+                /
+                <a target="_blank" href="https://github.com/psychology-of-AI/Rethinking-Pyschometric-Eval-LLMs">code</a>
+                <p></p>
+                <p>
+                  Anticipating LLM behavioral tendencies from low-cost psychometric probes is critical for safe deployment, but only if self-reports reliably predict behavior. We compare broad Big 5 traits with the Theory of Planned Behavior, which targets intentions toward specific behaviors and better predicts when self-reports translate into action.
+                </p>
+              </td>
+            </tr>
+
             <tr onmouseout="a_not_b_stop()" onmouseover="a_not_b_start()" id="anotb">
               <td style="padding:5px;width:17%;vertical-align:middle">
                 <div class="one">
@@ -244,7 +286,7 @@
                   <papertitle>Interactive Evaluation Requires a Design Science</papertitle>
                 </a>
                 <br />
-                <a target="_blank" href="https://keyangds.github.io/">Keyang Xuan</a>*, <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>*, <a target="_blank" href="https://lupantech.github.io/">Pan Lu</a>, <strong>Pengrui Han</strong>, <a target="_blank" href="https://wenkai-li.github.io/">Wenkai Li</a>, <a target="_blank" href="https://zhenyu.gallery/">Zhenyu Zhang</a>, <a target="_blank" href="https://zexuehe.github.io/">Zexue He</a>, <a target="_blank" href="https://wenyueh.github.io/">Wenyue Hua</a>, <a target="_blank" href="https://limanling.github.io/">Manling Li</a>, <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a>, <a target="_blank" href="https://mlg.eng.cam.ac.uk/adrian/">Adrian Weller</a>, <a target="_blank" href="https://yizhong-wang.com/">Yizhong Wang</a>&dagger;, and <a target="_blank" href="https://jiaxin-pei.github.io/">Jiaxin Pei</a>&dagger; (* <strong>Equal Contribution</strong>, &dagger; <strong>Equal Advising</strong>)
+                <a target="_blank" href="https://keyangds.github.io/">Keyang Xuan</a>*, <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>*, <a target="_blank" href="https://lupantech.github.io/">Pan Lu</a>, <strong>Pengrui Han</strong>, <a target="_blank" href="https://wenkai-li.github.io/">Wenkai Li</a>, <a target="_blank" href="https://zhenyu.gallery/">Zhenyu Zhang</a>, <a target="_blank" href="https://zexuehe.github.io/">Zexue He</a>, <a target="_blank" href="https://wenyueh.github.io/">Wenyue Hua</a>, <a target="_blank" href="https://limanling.github.io/">Manling Li</a>, <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a>, <a target="_blank" href="https://mlg.eng.cam.ac.uk/adrian/">Adrian Weller</a>, <a target="_blank" href="https://yizhong-wang.com/">Yizhong Wang</a><sup>&dagger;</sup>, and <a target="_blank" href="https://jiaxin-pei.github.io/">Jiaxin Pei</a><sup>&dagger;</sup> (* <strong>Equal Contribution</strong>, <sup>&dagger;</sup> <strong>Equal Advising</strong>)
                 <br />
                 <em>Preprint</em>, 2026
                 <br />
@@ -296,6 +338,13 @@
       </div>
       <img src="../images/llmrf-1.png" alt="LLM Reasoning Failures" class="paper-detail-image" style="max-width:600px">
     </div>
+  </div>
+
+  <!-- ============================================================== -->
+  <!-- Psychometric Evaluation (iframe) -->
+  <!-- ============================================================== -->
+  <div class="tab-panel" id="panel-psychometric">
+    <iframe class="paper-frame" data-src="https://psychology-of-ai.github.io/psychometric-evaluation.html" loading="lazy"></iframe>
   </div>
 
   <!-- ============================================================== -->
