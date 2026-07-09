@@ -123,9 +123,13 @@
           <!-- <b>[May. 2024]</b> We release <a href=" https://huggingface.co/spaces/ulab-ai/ArxivCopilot"> Paper Copilot</a>, an automated research tool for personalized academic service.<br> -->
           <!-- <b>[Apr. 2024]</b> Our paper on  <a href="https://openreview.net/pdf?id=sOSAu0XQcI"> Thought Retriever</a> is accepted to ICLR 2024 Workshop on How Far Are We From AGI.<br> -->
           <!-- <b>[Dec. 2023]</b>  I am joining <a href="https://github.com/ulab-uiuc">UIUC ULab</a>, working on foundation models and intelligent agents<br> -->
+	      </p>
+	      <p style="margin-top:2px">
+	        <a href="#" class="news-archive-trigger" data-open-news-archive>see archived news &rarr;</a>
+	      </p>
             </td>
           </tr>
-		
+
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
             <tr>
@@ -864,6 +868,63 @@
       });
 
       updateActive();
+    })();
+  </script>
+
+  <!-- ============= News archive modal ============= -->
+  <div class="news-archive-modal" id="news-archive-modal" role="dialog" aria-modal="true" aria-labelledby="news-archive-title">
+    <div class="news-archive-card">
+      <button class="news-archive-close" type="button" data-close-news-archive aria-label="Close">&times;</button>
+      <h2 class="news-archive-title" id="news-archive-title">News Archive</h2>
+      <p class="news-archive-subtitle">Earlier updates &mdash; releases, acceptances, and milestones</p>
+      <div class="news-archive-list">
+        <div class="news-archive-year">2025</div>
+        <p><b>[Dec 2025]</b> We released our paper on <a target="_blank" href="https://arxiv.org/abs/2512.16301">Adaptation of Agentic AI</a>, with public repository <a target="_blank" href="https://github.com/pat-jj/Awesome-Adaptation-of-Agentic-AI/tree/main">here</a>.</p>
+        <p><b>[Dec 2025]</b> Attending NeurIPS 2025 in San Diego, CA, Dec 2&ndash;7. Excited to catch up with old and new friends!</p>
+        <p><b>[Sep 2025]</b> <a target="_blank" href="https://psychology-of-ai.github.io/">The Personality Illusion</a> accepted to NeurIPS LAW Workshop and NeurIPS PersonaNLP Workshop, both as <strong>Oral Presentations</strong>.</p>
+        <p><b>[Sep 2025]</b> We released our work on <a target="_blank" href="https://psychology-of-ai.github.io/">The Personality Illusion</a>: LLMs do not have personalities in the way humans do.</p>
+        <p><b>[Jul 2025]</b> Our paper on <a target="_blank" href="https://openreview.net/forum?id=hsgMn4KBFG">LLM Reasoning Failures</a> accepted to <a target="_blank" href="https://sites.google.com/view/ai4mathworkshopicml2025/">ICML AI for Math Workshop</a>.</p>
+        <p><b>[Jun 2025]</b> Our paper on <a target="_blank" href="https://openreview.net/forum?id=pdLNGgdO1A">Human-Like Traits in LLMs</a> accepted to <a target="_blank" href="https://sites.google.com/view/mhf-icml2025">ICML MoFA Workshop</a>.</p>
+        <p><b>[Apr 2025]</b> Joined Prof. <a target="_blank" href="https://www.evlab.mit.edu/">Evelina Fedorenko</a>'s group at MIT, working on language and thought in LLMs.</p>
+        <p><b>[Apr 2025]</b> Beginning the MSCS program at UIUC in Fall 2025, continuing to work with Prof. <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a>.</p>
+
+        <div class="news-archive-year">2024</div>
+        <p><b>[Oct 2024]</b> Attending COLM 2024 to present our paper on <a target="_blank" href="https://arxiv.org/abs/2402.11764">synthetic data for debiasing</a>.</p>
+        <p><b>[Oct 2024]</b> Two papers accepted to EMNLP 2024: one in <a target="_blank" href="https://huggingface.co/spaces/ulab-ai/ArxivCopilot">Demo Track (Paper Copilot)</a>, and one in <a target="_blank" href="https://openreview.net/pdf?id=qu6sMJmEwl">Findings (LLM cognitive errors)</a>.</p>
+        <p><b>[Jul 2024]</b> Our paper on <a target="_blank" href="https://arxiv.org/abs/2402.11764">synthetic data for debiasing</a> accepted to COLM 2024.</p>
+        <p><b>[May 2024]</b> We released <a target="_blank" href="https://huggingface.co/spaces/ulab-ai/ArxivCopilot">Paper Copilot</a>, an automated research tool for personalized academic service.</p>
+        <p><b>[Apr 2024]</b> Our paper on <a target="_blank" href="https://openreview.net/pdf?id=sOSAu0XQcI">Thought Retriever</a> accepted to ICLR 2024 Workshop on How Far Are We From AGI.</p>
+
+        <div class="news-archive-year">2023</div>
+        <p><b>[Dec 2023]</b> Joined <a target="_blank" href="https://github.com/ulab-uiuc">UIUC ULab</a>, working on foundation models and intelligent agents.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const modal = document.getElementById('news-archive-modal');
+      if (!modal) return;
+      const open = () => {
+        modal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      };
+      const close = () => {
+        modal.classList.remove('open');
+        document.body.style.overflow = '';
+      };
+      document.querySelectorAll('[data-open-news-archive]').forEach(el => {
+        el.addEventListener('click', e => { e.preventDefault(); open(); });
+      });
+      document.querySelectorAll('[data-close-news-archive]').forEach(el => {
+        el.addEventListener('click', close);
+      });
+      modal.addEventListener('click', e => {
+        if (e.target === modal) close();
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && modal.classList.contains('open')) close();
+      });
     })();
   </script>
 
