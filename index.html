@@ -60,14 +60,11 @@
                 <name>Pengrui Han (Barry)</name>
               </p>
               <p>   I am currently in the MSCS program at <b>UIUC</b>, advised by Prof. <a href="https://cs.stanford.edu/~jiaxuan/"> Jiaxuan You</a>. 
-                I am also a researcher in the <b>MIT Brain and Cognitive Sciences</b> department, working with Prof. 
-                <a href="https://www.evlab.mit.edu/">Evelina Fedorenko</a> and Dr. 
-                <a href="https://scholar.google.com/citations?user=Iwm9mC0AAAAJ&hl=en&oi=ao">Andrea de Varda</a> in the <b>EvLab</b>. 
-                I received my B.A. in Mathematics and Computer Science from <a href="https://www.carleton.edu/"> Carleton College</a>, a leading liberal arts college in the US.
+                I am also a researcher in the <b>MIT Brain and Cognitive Sciences</b> department, working with Prof.
+                <a href="https://www.evlab.mit.edu/">Evelina Fedorenko</a> in the <b>EvLab</b>.
+                I received my B.A. in Mathematics and Computer Science from <b>Carleton College</b>, a leading liberal arts college in the US.
                 During my undergrad, I was fortunate to work with Prof.
-                <a href="http://tensorlab.cms.caltech.edu/users/anima/"> Anima Anandkumar</a> and Dr. 
-                <a href="http://www.rkocielnik.com/">Rafał Kocielnik</a> in the <b>Anima AI+Science Lab</b> at <b>Caltech</b>.
-                I also previously interned at <b>NVIDIA</b>.
+                <a href="http://tensorlab.cms.caltech.edu/users/anima/"> Anima Anandkumar</a> in the <b>Anima AI+Science Lab</b> at <b>Caltech</b>.
 
 
     <!-- <p>
@@ -97,6 +94,7 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading id="news">News</heading>
 	      <p>
+  <b>[Sep 2026]</b> Honored to be named a <a href="https://www.businesswire.com/news/home/20260918450995/en/Siebel-Scholars-Foundation-Announces-Class-of-2027"><strong>Siebel Scholar</strong>, Class of 2027</a>!<br>
   <b>[Jul 2026]</b> Honored to receive the <strong>Best Paper Award</strong> at the <a href="https://sites.google.com/view/icml-ctb/home">ICML CTB Workshop</a> for our work on <a href="https://psychology-of-ai.github.io/psychometric-evaluation.html">Psychometric Evaluation of LLMs</a>!<br>
   <b>[Jul 2026]</b> We released our new preprint <a href="https://pengrui-han.github.io/LLM_Modularity_Page/">Modular Cognitive Architecture Emerges in Large Language Models</a>.  <br>
   <b>[Apr 2026]</b> Our paper <a href="https://psychology-of-ai.github.io/">The Personality Illusion</a> is accepted to ICML. See you in Seoul!<br>
@@ -136,7 +134,16 @@
               <heading id="research">Research</heading>
               <!-- <p> I’m interested in <b>language and intelligence</b> in both humans and machines, particularly the role language plays in shaping intelligent behavior, which I study through comparisons between LLMs and humans. I analyze their behavioral capabilities and failures, examine internal mechanisms, and develop strategies to enhance intelligent machine systems.</p> -->
   <p>
-    My research aims to advance <strong>scientific understanding of AI</strong> (especially neural models like LLMs), and more broadly, the general principles of intelligence and intelligent behavior. I also work on problems where current AI still falls short of biological intelligence, such as adaptivity, robustness, and sample efficiency. At the same time, I am drawn to using AI as a powerful instrument for studying open scientific questions about the human mind and brain. I approach this through four interconnected threads:
+    My research is broadly driven by questions about <strong>intelligence and cognition</strong>. As AI systems develop increasingly complex cognitive abilities and behaviors, I am particularly interested in two directions:
+  </p>
+  <p style="margin-top:14px">
+    <strong>(1) Using AI to study intelligence.</strong> AI systems provide unique experimental objects for studying the principles underlying intelligence: they exhibit many of the cognitive abilities we have traditionally studied in humans, while their behavior, self-reports, and internal computations can all be observed and experimentally intervened upon.
+  </p>
+  <p style="margin-top:14px">
+    <strong>(2) AI evaluation and safety.</strong> As these systems become increasingly capable, I want to develop rigorous ways to evaluate, understand, and monitor their behavior and internal processes, ultimately helping make AI systems safer and better aligned.
+  </p>
+  <p style="margin-top:14px">
+    My research across these directions often combines <strong>behavioral evaluation, mechanistic interpretability, AI alignment, and insights from cognitive science and neuroscience</strong>:
   </p>
 
   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin:15px auto 10px auto;"><tbody>
@@ -201,9 +208,43 @@
     </tr>
   </tbody></table>
 
-  <p style="margin-top:20px">
-    The first two threads parallel <em>cognitive science</em> and <em>neuroscience</em> in their study of mind and brain. The third draws on both to build better AI; the fourth turns that AI back on biological intelligence and scientific discovery.
+  <!-- ============= BEGIN CURRENT FOCUS — currently HIDDEN, uncomment to publish (matching CSS block lives in stylesheet.css)
+  <p style="margin-top:12px">
+    The above threads describe the broad methods and long-term goals that shape my research. <strong>Below is a list of concrete open scientific questions I am currently actively working on:</strong>
   </p>
+  <div class="current-focus">
+    <p class="current-focus-label">Open Questions</p>
+
+    <div class="current-focus-question">
+      <a href="#TODO-language-and-thought-slides" target="_blank" class="current-focus-slide-thumb" aria-label="View slides on Language and Thought in LLMs">
+        <img src="images/modularity.png" alt="Language and Thought in LLMs &mdash; slide preview">
+      </a>
+      <div class="current-focus-question-content">
+        <h3 class="current-focus-title">Language and Thought in LLMs</h3>
+        <p class="current-focus-body">Language and thinking have been long studied in humans, with rich findings from cognitive science, neuroscience, and psychology. Yet in humans these signals are indirect and costly to obtain. LLMs offer a rare object for this question: capable of rich cognitive behavior, with <strong>verbal report, behavior, and internal thought</strong> all directly observable and intervenable. This opens three directions I care about: first, studying the relationships among what models say, do, and compute; second, using this understanding to build systems that are more consistent, transparent, and reliable; and third, developing tools to better inspect internal thought, which is harder to characterize than verbal report and behavior.</p>
+        <p class="current-focus-related">
+          <a class="current-focus-chip" href="research/mechanistic.html#modularity">Modularity</a><a class="current-focus-chip" href="research/behavioral.html#personality">Personality Illusion</a><a class="current-focus-chip" href="research/behavioral.html#psychometric">Rethinking Psychometric Evaluation</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="current-focus-divider">&middot; &middot; &middot;</div>
+
+    <div class="current-focus-question">
+      <a href="#TODO-question-2-slides" target="_blank" class="current-focus-slide-thumb current-focus-slide-thumb-empty" aria-label="View slides on second open question">
+        <span class="current-focus-slide-placeholder-text">Slides</span>
+      </a>
+      <div class="current-focus-question-content">
+        <h3 class="current-focus-title">[Placeholder &mdash; Second Open Question]</h3>
+        <p class="current-focus-body">Placeholder for the second open question &mdash; a concrete problem I am currently working on, described in one clean sentence.</p>
+        <p class="current-focus-related">
+          <a class="current-focus-chip" href="#">Placeholder Paper A</a><a class="current-focus-chip" href="#">Placeholder Paper B</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  ============= END CURRENT FOCUS ============= -->
+
   <p style="margin-top:8px">
     If any of this resonates with your interests, feel free to reach out and let's <strong>connect / collaborate</strong>!
   </p>
@@ -619,6 +660,7 @@
             <td>
               <heading id="awards">Selected Awards</heading>
 		<ul>
+      <li>Siebel Scholar, Class of 2027 (2026)</li>
       <li>ICML CTB Workshop Best Paper Award (2026)</li>
       <li>TMLR Survey Certification (2026)</li>
       <li>NeurIPS LAW Workshop Best Paper Honorable Mention Award (2025)</li>
@@ -636,6 +678,7 @@
             <td>
               <heading id="media">Selected Media</heading>
 		<ul>
+      <li><a target="_blank" href="https://www.forbes.com/sites/lanceeliot/2026/08/26/using-eight-billion-ai-personas-for-psychology-research-has-its-ups-and-downs/">Using Eight Billion AI Personas For Psychology Research Has Its Ups And Downs</a>, Forbes, 2026</li>
       <li><a target="_blank" href="https://wap.mittrchina.com/news/detail/16637">In Conversation with Pengrui Han: Opening Up the AI Brain Reveals Functional Specializations Similar to the Human Brain</a>, MIT Technology Review China, 2026</li>
       <li><a target="_blank" href="https://www.livescience.com/technology/artificial-intelligence/not-how-you-build-a-digital-mind-reasoning-failures-are-preventing-ai-models-from-achieving-human-level-intelligence">'Not how you build a digital mind': How reasoning failures are preventing AI models from achieving human-level intelligence</a>, Live Science, 2026</li>
       <li><a target="_blank" href="https://www.popularmechanics.com/science/a70328740/ai-fatal-flaw/">Scientists Found AI’s Fatal Flaw—The Most Advanced Models Are Failing Basic Logic Tests</a>, Popular Mechanics, 2026</li>
@@ -654,7 +697,8 @@
             <td>
               <heading id="teaching">Teaching</heading>
 		<ul>
-      <li>CS 440: Artificial Intelligence, Teaching Assistant @ UIUC, Summer 2026</li> 
+      <li>CS 440: Artificial Intelligence, Teaching Assistant @ UIUC, Fall 2026</li>
+      <li>CS 440: Artificial Intelligence, Teaching Assistant @ UIUC, Summer 2026</li>
       <li>CS 411: Database Systems, Teaching Assistant @ UIUC, Spring 2026</li> 
       <li>CS 512: Data Mining Principles, Teaching Assistant @ UIUC, Fall 2025</li>
        <li>MATH 241: Ordinary Differential Equations, Teaching Assistant @ Carleton College, Fall 2024</li>

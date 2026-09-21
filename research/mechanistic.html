@@ -123,6 +123,41 @@
               </td>
             </tr>
 
+            <tr onmouseout="sharedcircuit_stop()" onmouseover="sharedcircuit_start()" id="sharedcircuit">
+              <td style="padding:5px;width:17%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='sharedcircuit_image'>
+                    <img src='../images/shared_circuit.png' width="150">
+                  </div>
+                  <img src='../images/shared_circuit.png' width="150">
+                </div>
+                <script type="text/javascript">
+                  function sharedcircuit_start() {
+                    document.getElementById('sharedcircuit_image').style.opacity = "1";
+                  }
+                  function sharedcircuit_stop() {
+                    document.getElementById('sharedcircuit_image').style.opacity = "0";
+                  }
+                  sharedcircuit_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:83%;vertical-align:middle">
+                <a target="_blank" href="https://arxiv.org/abs/2609.04463">
+                  <papertitle>Shared Circuits Predict Whether LLMs Generalize Across Formats in Arithmetic Reasoning</papertitle>
+                </a>
+                <br />
+                <a target="_blank" href="https://andrea-de-varda.github.io/">Andrea Gregor de Varda</a>, <a target="_blank" href="https://sanapandey.github.io/">Sana Pandey</a>, <strong>Pengrui Han</strong>, <a target="_blank" href="https://www.mit.edu/~jda/">Jacob Andreas</a>, and <a target="_blank" href="https://www.evlab.mit.edu/">Evelina Fedorenko</a>
+                <br />
+                <em>Preprint</em>, 2026
+                <br />
+                <a target="_blank" href="https://arxiv.org/abs/2609.04463">arXiv</a>
+                <p></p>
+                <p>
+                  LLMs solve numeric arithmetic (2+5) almost perfectly, yet stumble on verbal renditions of the same problems. Localizing the circuits models recruit for each format, we find that <strong>circuit overlap predicts generalization</strong>: the more a model reuses its numeric circuit for verbal formats across English, Spanish, and Italian, the better it transfers &mdash; down to which individual items are solved correctly.
+                </p>
+              </td>
+            </tr>
+
           </tbody></table>
 
         </td>
