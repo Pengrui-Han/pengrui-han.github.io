@@ -95,7 +95,7 @@
               <heading id="news">News</heading>
 	      <p>
   <b>[Sep 2026]</b> Honored to be named a <a href="https://www.businesswire.com/news/home/20260918450995/en/Siebel-Scholars-Foundation-Announces-Class-of-2027"><strong>Siebel Scholar</strong>, Class of 2027</a>!<br>
-  <b>[Jul 2026]</b> Honored to receive the <strong>Best Paper Award</strong> at the <a href="https://sites.google.com/view/icml-ctb/home">ICML CTB Workshop</a> for our work on <a href="https://psychology-of-ai.github.io/psychometric-evaluation.html">Psychometric Evaluation of LLMs</a>!<br>
+  <b>[Sep 2026]</b> Our paper <a href="https://psychology-of-ai.github.io/psychometric-evaluation.html">Rethinking Psychometric Evaluation of LLMs</a> is accepted to <strong>NeurIPS 2026</strong>, after receiving the <strong>Best Paper Award</strong> at the <a href="https://sites.google.com/view/icml-ctb/home">ICML CTB Workshop</a>!<br>
   <b>[Jul 2026]</b> We released our new preprint <a href="https://pengrui-han.github.io/LLM_Modularity_Page/">Modular Cognitive Architecture Emerges in Large Language Models</a>.  <br>
   <b>[Apr 2026]</b> Our paper <a href="https://psychology-of-ai.github.io/">The Personality Illusion</a> is accepted to ICML. See you in Seoul!<br>
   <b>[Mar 2026]</b>  Our paper <a href="https://www.arxiv.org/abs/2602.06176">Large Language Model Reasoning Failures</a> is featured by <a href="https://www.livescience.com/technology/artificial-intelligence/not-how-you-build-a-digital-mind-reasoning-failures-are-preventing-ai-models-from-achieving-human-level-intelligence">Live Science</a> and <a href="https://www.popularmechanics.com/science/a70328740/ai-fatal-flaw/">Popular Mechanics</a>. Thank you!<br>
@@ -363,6 +363,48 @@
               <p></p>
               <p>
                 Through circuit analyses across 46 tasks spanning language, formal reasoning, social reasoning, and physical reasoning, we find that LLMs develop a <strong>modular cognitive architecture mirroring the human brain</strong>: tasks drawing on the same network in humans recruit overlapping neurons in LLMs, whereas tasks drawing on different networks recruit distinct neurons. Modularity may be a fundamental principle of intelligent systems rather than a biological accident.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="psychometric_stop()" onmouseover="psychometric_start()" id="psychometric">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='psychometric_image'>
+                  <img src='images/pyschometric.png' width="150">
+                </div>
+                <img src='images/pyschometric.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function psychometric_start() {
+                  document.getElementById('psychometric_image').style.opacity = "1";
+                }
+
+                function psychometric_stop() {
+                  document.getElementById('psychometric_image').style.opacity = "0";
+                }
+                psychometric_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://psychology-of-ai.github.io/psychometric-evaluation.html">
+                <papertitle>Rethinking Psychometric Evaluation of LLMs: When and Why Self-Reports Predict Behavior</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://www.rkocielnik.com/">Rafal D. Kocielnik</a>, <strong>Pengrui Han</strong>, <a target="_blank" href="https://peiyang-song.github.io/">Peiyang Song</a>, <a target="_blank" href="https://myrl.marmarel.is/">Myrl G. Marmarelis</a>, <a target="_blank" href="https://www.chia.cam.ac.uk/team/ramit-debnath">Ramit Debnath</a>, <a target="_blank" href="https://www.deanmobbslab.com/">Dean Mobbs</a>, <a target="_blank" href="https://tensorlab.cms.caltech.edu/users/anima/">Anima Anandkumar</a>, and <a target="_blank" href="https://www.rmichaelalvarez.com/">R. Michael Alvarez</a>
+              <br />
+              <em>Conference on Neural Information Processing Systems (NeurIPS), 2026</em>
+              <br />
+              <em>ICML Workshop on Combining Theory and Benchmarks (CTB)</em>, 2026, <font color="red"><strong>Best Paper Award</strong></font>
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2606.12730">arXiv</a>
+              /
+              <a target="_blank" href="https://psychology-of-ai.github.io/psychometric-evaluation.html">project</a>
+              /
+              <a target="_blank" href="https://github.com/psychology-of-AI/Rethinking-Pyschometric-Eval-LLMs">code</a>
+              <p></p>
+              <p>
+                Anticipating LLM behavioral tendencies from low-cost psychometric probes is critical for safe deployment, but only if self-reports reliably predict behavior. We compare broad Big 5 traits with the Theory of Planned Behavior, which targets intentions toward specific behaviors and better predicts when self-reports translate into action.
               </p>
             </td>
           </tr>
@@ -924,6 +966,7 @@
       <p class="news-archive-subtitle">Earlier updates &mdash; releases, acceptances, and milestones</p>
       <div class="news-archive-list">
         <div class="news-archive-year">2026</div>
+        <p><b>[Jul 2026]</b> Honored to receive the <strong>Best Paper Award</strong> at the <a target="_blank" href="https://sites.google.com/view/icml-ctb/home">ICML CTB Workshop</a> for our work on <a target="_blank" href="https://psychology-of-ai.github.io/psychometric-evaluation.html">Psychometric Evaluation of LLMs</a>!</p>
         <p><b>[Jun 2026]</b> We released our paper on <a target="_blank" href="https://psychology-of-ai.github.io/psychometric-evaluation.html">Psychometric Evaluation of LLMs</a> &mdash; <a target="_blank" href="https://sites.google.com/view/icml-ctb/home">ICML CTB Workshop</a>, <strong>Oral Presentation</strong>.</p>
         <p><b>[Jan 2026]</b> Our paper <a target="_blank" href="https://openreview.net/pdf?id=vnX1WHMNmz">Large Language Model Reasoning Failures</a> accepted to TMLR with a <strong>Survey Certificate</strong>.</p>
 
